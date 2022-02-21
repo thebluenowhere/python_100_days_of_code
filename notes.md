@@ -16,7 +16,7 @@
 
 display = []
 for _ in chosen_word:
-  display.append('_')
+    display.append('_')
 
 guess = input("Guess a letter: ").lower()
 
@@ -25,9 +25,9 @@ guess = input("Guess a letter: ").lower()
 #e.g. If the user guessed "p" and the chosen word was "apple", then display should be ["_", "p", "p", "_", "_"].
 
 for position in range(len(chosen_word)):
-  letter = chosen_word[position]
-  if letter == guess:
-    display[position] = chosen_word[position]
+    letter = chosen_word[position]
+    if letter == guess:
+      display[position] = chosen_word[position]
 print(display)
  ```
  
