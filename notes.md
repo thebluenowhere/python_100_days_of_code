@@ -9,7 +9,7 @@
  ```i % n == 0``` if divisible without remainder then it is a multiple of n.
 
  - To replace indice of list using For loop:
- ```
+ ```py
 #TODO-1: - Create an empty List called display.
 #For each letter in the chosen_word, add a "_" to 'display'.
 #So if the chosen_word was "apple", display should be ["_", "_", "_", "_", "_"] with 5 "_" representing each letter to guess.
@@ -32,3 +32,8 @@ for position in range(word_length):
 print(display)
  ```
  
+- To round a number up instead of down like with round()
+```
+import math
+math.ceil()
+```
