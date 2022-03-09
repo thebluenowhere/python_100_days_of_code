@@ -1,4 +1,4 @@
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 def caesar(start_text, shift_amount, cipher_direction):
   end_text = ""
@@ -12,20 +12,20 @@ def caesar(start_text, shift_amount, cipher_direction):
       end_text += alphabet[new_position]        
     else:
       end_text += char
-
   print(f"Here's the {cipher_direction}d result: {end_text}")
     
 from art import logo
 print(logo)
 
-restart = True
-while restart == True:
+should_end = False
+while not should_end:
   direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
   text = input("Type your message:\n").lower()
   shift = int(input("Type the shift number:\n"))
   #Make the index shift work even if number entered > 26 (i.e. len(list))
   shift = shift % 26
   caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
-  choice = input("Do you want to restart the program? Answer: Yes/No\n")
-  if choice != "yes".lower().strip():
-    restart = False
+  restart = input("Do you want to restart the program? Answer: Yes/No\n")
+  if restart == "no".lower().strip():
+    should_end = True
+    print("Goodbye.")
